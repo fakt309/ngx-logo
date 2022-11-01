@@ -1,20 +1,168 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<ng-container *ngIf="!choosen">
+  <header>
+    <vg-logo *ngIf="mode === 'simple'"></vg-logo>
+    <vg-logo *ngIf="mode === 'customSrc'" [src]="'assets/twitter.png'"></vg-logo>
+    <vg-logo *ngIf="mode === 'customTime'" [time]="2000"></vg-logo>
+    <vg-logo *ngIf="mode === 'draggable'" [draggable]="true"></vg-logo>
+    <vg-logo *ngIf="mode === 'customCss'" class="custom-css"></vg-logo>
+    <div class="text">
+      <ng-container *ngIf="mode === 'simple'">Third Rome</ng-container>
+      <ng-container *ngIf="mode === 'customSrc'"><span [style.color]="'#179cf0'">Elon Musk's twitter</span></ng-container>
+      <ng-container *ngIf="mode === 'customTime'">Third Rome</ng-container>
+      <ng-container *ngIf="mode === 'draggable'">Third Rome</ng-container>
+      <ng-container *ngIf="mode === 'customCss'">Third Rome</ng-container>
+    </div>
 
+    <div class="text-example">change:</div>
+    <mat-select class="select" [(value)]="mode" (selectionChange)="changeMode($event)">
+      <mat-option value="simple">simple</mat-option>
+      <mat-option value="customSrc">custom image</mat-option>
+      <mat-option value="customTime">custom time</mat-option>
+      <mat-option value="draggable">draggable</mat-option>
+      <mat-option value="customCss">custom css</mat-option>
+    </mat-select>
+  </header>
+  <div class="content">
+
+    <div class="screen">
+      <div class="description">The usual preloading of the site page in the form of a logo that smoothly transitions to the place that you set.</div>
+      <div class="example">
+        <div class="example__code">
+          <div class="example__code-inside">
+            &lt;<span style="color:#f06292">vg-logo</span><br/>
+            &nbsp;&nbsp;<span style="color:#ffc107"> [alt]</span>=<span style="color:#8bc34a">&Prime;&prime;logotype of my company&prime;&Prime;</span><br/>
+            &gt;&lt;/<span style="color:#f06292">vg-logo</span>&gt;
+          </div>
+        </div>
+        <div
+          class="example__view"
+          [style.background-image]="'url(../assets/1.gif)'"
+        ></div>
+      </div>
+    </div>
+
+    <div class="screen">
+      <div class="description">Preloading with your own logo</div>
+      <div class="example">
+        <div class="example__code">
+          <div class="example__code-inside">
+            &lt;<span style="color:#f06292">vg-logo</span><br/>
+            &nbsp;&nbsp;<span style="color:#ffc107"> [alt]</span>=<span style="color:#8bc34a">&Prime;&prime;logotype of my company&prime;&Prime;</span><br/>
+            &nbsp;&nbsp;<span style="color:#ffc107"> [src]</span>=<span style="color:#8bc34a">&Prime;&prime;assets/twitter.png&prime;&Prime;</span><br/>
+            &gt;&lt;/<span style="color:#f06292">vg-logo</span>&gt;
+          </div>
+        </div>
+        <div
+          class="example__view"
+          [style.background-image]="'url(../assets/2.gif)'"
+        ></div>
+      </div>
+    </div>
+
+    <div class="screen">
+      <div class="description">Setting the logo animation time (in milliseconds)</div>
+      <div class="example">
+        <div class="example__code">
+          <div class="example__code-inside">
+            &lt;<span style="color:#f06292">vg-logo</span><br/>
+            &nbsp;&nbsp;<span style="color:#ffc107"> [alt]</span>=<span style="color:#8bc34a">&Prime;&prime;logotype of my company&prime;&Prime;</span><br/>
+            &nbsp;&nbsp;<span style="color:#ffc107"> [time]</span>=<span style="color:#8bc34a">&Prime;2000&Prime;</span><br/>
+            &gt;&lt;/<span style="color:#f06292">vg-logo</span>&gt;
+          </div>
+        </div>
+        <div
+          class="example__view"
+          [style.background-image]="'url(../assets/3.gif)'"
+        ></div>
+      </div>
+    </div>
+
+    <div class="screen">
+      <div class="description">Preloading with the ability to drag the logo with the mouse cursor or finger on the screen (just for fun to kill time)</div>
+      <div class="example">
+        <div class="example__code">
+          <div class="example__code-inside">
+            &lt;<span style="color:#f06292">vg-logo</span><br/>
+            &nbsp;&nbsp;<span style="color:#ffc107"> [alt]</span>=<span style="color:#8bc34a">&Prime;&prime;logotype of my company&prime;&Prime;</span><br/>
+            &nbsp;&nbsp;<span style="color:#ffc107"> [draggable]</span>=<span style="color:#8bc34a">&Prime;true&Prime;</span><br/>
+            &gt;&lt;/<span style="color:#f06292">vg-logo</span>&gt;
+          </div>
+        </div>
+        <div
+          class="example__view"
+          [style.background-image]="'url(../assets/4.gif)'"
+        ></div>
+      </div>
+    </div>
+
+    <div class="screen">
+      <div class="description">Preloading with custom css styles</div>
+      <div class="example">
+        <div class="example__wrap-code">
+          <div class="example__code">
+            <div class="example__code-inside">
+              &lt;<span style="color:#f06292">vg-logo</span><br/>
+              &nbsp;&nbsp;<span style="color:#ffc107"> [alt]</span>=<span style="color:#8bc34a">&Prime;&prime;logotype of my company&prime;&Prime;</span><br/>
+              &nbsp;&nbsp;<span style="color:#ffc107"> class</span>=<span style="color:#8bc34a">&Prime;custom&Prime;</span><br/>
+              &gt;&lt;/<span style="color:#f06292">vg-logo</span>&gt;
+            </div>
+          </div>
+          <div class="example__code">
+            <div class="example__code-inside">
+              :<span style="color:#ffc107">host</span> &#123;<br/>
+              &nbsp;&nbsp;&gt; .<span style="color:#ffc107">custom</span>::ng-deep &#123;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&gt; .<span style="color:#ffc107">back</span> &#123;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: #<span style="color:#ffc107">ce93d8</span>;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&#125;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&gt; .<span style="color:#ffc107">preload</span> &#123;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max-width: <span style="color:#ffc107">300px</span>;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max-height: <span style="color:#ffc107">300px</span>;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&#125;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&gt; .<span style="color:#ffc107">logo</span> &#123;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width: <span style="color:#ffc107">40px</span>;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: #<span style="color:#ffc107">ce93d822</span>;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-radius: <span style="color:#ffc107">100px</span>;<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&#125;<br/>
+              &nbsp;&nbsp;&#125;<br/>
+              &#125;
+            </div>
+          </div>
+        </div>
+        <div
+          class="example__view"
+          [style.background-image]="'url(../assets/5.gif)'"
+        ></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="content">
+    <div class="block">
+      <img width="80%" src="assets/1.jpg" alt="">
+      <div class="text">any content</div>
+    </div>
+    <div class="block">
+      <img width="80%" src="assets/2.jpg" alt="">
+      <div class="text">any content</div>
+    </div>
+    <div class="block">
+      <img width="80%" src="assets/3.jpg" alt="">
+      <div class="text">any content</div>
+    </div>
+    <div class="block">
+      <img width="80%" src="assets/4.jpg" alt="">
+      <div class="text">any content</div>
+    </div>
+    <div class="block">
+      <img width="80%" src="assets/5.jpg" alt="">
+      <div class="text">any content</div>
+    </div>
+    <div class="block">
+      <img width="80%" src="assets/6.jpg" alt="">
+      <div class="text">any content</div>
+    </div>
+  </div>
+  <footer>
+    <a href="https://twitter.com/vgaidadei" target="_blank">Gaius da deus</a>
+  </footer>
+</ng-container>

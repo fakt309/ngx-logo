@@ -1,0 +1,19 @@
+<div
+  class="back"
+  [style.background-color]="back"
+  [style.transition-duration]="time+'ms'"
+></div>
+
+<div
+  [class]="drag.animate ? 'preload animate' : 'preload'"
+  (mousedown)="startInteraction($event)"
+  (touchstart)="startInteraction($event)"
+  [style.background-image]="'url('+src+')'"
+  [style.transition-duration]="time+'ms'"
+></div>
+
+<img
+  class="logo"
+  [attr.alt]="alt"
+  [attr.src]="src"
+/>

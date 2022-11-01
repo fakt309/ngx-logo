@@ -1,27 +1,57 @@
-# Logo
+# ngx-logo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Preloading a web page that shows your logo that smoothly transitions to the location you set it to.
 
-## Development server
+[DEMO & DOCS](https://fakt309.github.io/ngx-logo/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[/vgaidadei](https://twitter.com/vgaidadei) - my twitter (you can contact with me if you want to)
 
-## Code scaffolding
+# Advantage this lib:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Hides the ugly loading of your site
+* Very simple
+* Supports all devices
+* Smooth animations
+* Distract the user by dragging the logo
 
-## Build
+# How it use
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### 1
 
-## Running unit tests
+```
+npm i @vgaidadei/ngx-logo
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 2
 
-## Running end-to-end tests
+app.module.ts
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+...
 
-## Further help
+import { NgxLogoModule } from '@vgaidadei/ngx-logo'
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+...
+
+  imports: [
+    ... ,
+    NgxLogoModule
+  ]
+
+...
+
+```
+
+### 3
+
+any place where you want insert your logo component html file
+
+```
+
+...
+
+  <ngx-logo [alt]="'logotion company'" [src]="'assets/logo.png'"></ngx-logo>
+
+...
+
+```
