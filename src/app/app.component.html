@@ -1,10 +1,10 @@
 <ng-container *ngIf="!choosen">
   <header>
-    <vg-logo *ngIf="mode === 'simple'"></vg-logo>
-    <vg-logo *ngIf="mode === 'customSrc'" [src]="'assets/twitter.png'"></vg-logo>
-    <vg-logo *ngIf="mode === 'customTime'" [time]="2000"></vg-logo>
-    <vg-logo *ngIf="mode === 'draggable'" [draggable]="true"></vg-logo>
-    <vg-logo *ngIf="mode === 'customCss'" class="custom-css"></vg-logo>
+    <ngx-logo *ngIf="mode === 'simple'"></ngx-logo>
+    <ngx-logo *ngIf="mode === 'customSrc'" [src]="'assets/twitter.png'"></ngx-logo>
+    <ngx-logo *ngIf="mode === 'customTime'" [time]="2000"></ngx-logo>
+    <ngx-logo *ngIf="mode === 'draggable'" [draggable]="true"></ngx-logo>
+    <ngx-logo *ngIf="mode === 'customCss'" class="custom-css"></ngx-logo>
     <div class="text">
       <ng-container *ngIf="mode === 'simple'">Third Rome</ng-container>
       <ng-container *ngIf="mode === 'customSrc'"><span [style.color]="'#179cf0'">Elon Musk's twitter</span></ng-container>
@@ -29,9 +29,9 @@
       <div class="example">
         <div class="example__code">
           <div class="example__code-inside">
-            &lt;<span style="color:#f06292">vg-logo</span><br/>
+            &lt;<span style="color:#f06292">ngx-logo</span><br/>
             &nbsp;&nbsp;<span style="color:#ffc107"> [alt]</span>=<span style="color:#8bc34a">&Prime;&prime;logotype of my company&prime;&Prime;</span><br/>
-            &gt;&lt;/<span style="color:#f06292">vg-logo</span>&gt;
+            &gt;&lt;/<span style="color:#f06292">ngx-logo</span>&gt;
           </div>
         </div>
         <div
@@ -46,10 +46,10 @@
       <div class="example">
         <div class="example__code">
           <div class="example__code-inside">
-            &lt;<span style="color:#f06292">vg-logo</span><br/>
+            &lt;<span style="color:#f06292">ngx-logo</span><br/>
             &nbsp;&nbsp;<span style="color:#ffc107"> [alt]</span>=<span style="color:#8bc34a">&Prime;&prime;logotype of my company&prime;&Prime;</span><br/>
             &nbsp;&nbsp;<span style="color:#ffc107"> [src]</span>=<span style="color:#8bc34a">&Prime;&prime;assets/twitter.png&prime;&Prime;</span><br/>
-            &gt;&lt;/<span style="color:#f06292">vg-logo</span>&gt;
+            &gt;&lt;/<span style="color:#f06292">ngx-logo</span>&gt;
           </div>
         </div>
         <div
@@ -64,10 +64,10 @@
       <div class="example">
         <div class="example__code">
           <div class="example__code-inside">
-            &lt;<span style="color:#f06292">vg-logo</span><br/>
+            &lt;<span style="color:#f06292">ngx-logo</span><br/>
             &nbsp;&nbsp;<span style="color:#ffc107"> [alt]</span>=<span style="color:#8bc34a">&Prime;&prime;logotype of my company&prime;&Prime;</span><br/>
             &nbsp;&nbsp;<span style="color:#ffc107"> [time]</span>=<span style="color:#8bc34a">&Prime;2000&Prime;</span><br/>
-            &gt;&lt;/<span style="color:#f06292">vg-logo</span>&gt;
+            &gt;&lt;/<span style="color:#f06292">ngx-logo</span>&gt;
           </div>
         </div>
         <div
@@ -82,10 +82,10 @@
       <div class="example">
         <div class="example__code">
           <div class="example__code-inside">
-            &lt;<span style="color:#f06292">vg-logo</span><br/>
+            &lt;<span style="color:#f06292">ngx-logo</span><br/>
             &nbsp;&nbsp;<span style="color:#ffc107"> [alt]</span>=<span style="color:#8bc34a">&Prime;&prime;logotype of my company&prime;&Prime;</span><br/>
             &nbsp;&nbsp;<span style="color:#ffc107"> [draggable]</span>=<span style="color:#8bc34a">&Prime;true&Prime;</span><br/>
-            &gt;&lt;/<span style="color:#f06292">vg-logo</span>&gt;
+            &gt;&lt;/<span style="color:#f06292">ngx-logo</span>&gt;
           </div>
         </div>
         <div
@@ -101,10 +101,10 @@
         <div class="example__wrap-code">
           <div class="example__code">
             <div class="example__code-inside">
-              &lt;<span style="color:#f06292">vg-logo</span><br/>
+              &lt;<span style="color:#f06292">ngx-logo</span><br/>
               &nbsp;&nbsp;<span style="color:#ffc107"> [alt]</span>=<span style="color:#8bc34a">&Prime;&prime;logotype of my company&prime;&Prime;</span><br/>
               &nbsp;&nbsp;<span style="color:#ffc107"> class</span>=<span style="color:#8bc34a">&Prime;custom&Prime;</span><br/>
-              &gt;&lt;/<span style="color:#f06292">vg-logo</span>&gt;
+              &gt;&lt;/<span style="color:#f06292">ngx-logo</span>&gt;
             </div>
           </div>
           <div class="example__code">

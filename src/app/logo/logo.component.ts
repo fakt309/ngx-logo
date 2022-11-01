@@ -3,7 +3,7 @@ import { Component, OnInit, Input, HostListener, ElementRef } from '@angular/cor
 import { example } from './example'
 
 @Component({
-  selector: 'vg-logo',
+  selector: 'ngx-logo',
   templateUrl: './logo.component.html',
   styleUrls: ['./logo.component.scss']
 })
