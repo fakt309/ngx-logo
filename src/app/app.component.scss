@@ -136,6 +136,21 @@
           box-shadow: 0px 0px 5px #dddddd;
           flex-shrink: 0;
         }
+        > .example__view_1 {
+          background-image: url(../assets/1.gif);
+        }
+        > .example__view_2 {
+          background-image: url(../assets/2.gif);
+        }
+        > .example__view_3 {
+          background-image: url(../assets/3.gif);
+        }
+        > .example__view_4 {
+          background-image: url(../assets/4.gif);
+        }
+        > .example__view_5 {
+          background-image: url(../assets/5.gif);
+        }
       }
     }
   }
